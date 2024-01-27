@@ -51,7 +51,7 @@ return -1;
     }else if(word.substring(0,2).equals("qu")){
     return word.substring(2,word.length())+"quay";
     }else if (findFirstVowel(word.substring(0,1))==-1){
-      return word.substring(1,word.length())+word.substring(0,1)+"ay";
+     return word.substring(findFirstVowel(word),word.length())+word.substring(0,findFirstVowel(word))+"ay";
     }else{
     return "ERROR!";
     }
